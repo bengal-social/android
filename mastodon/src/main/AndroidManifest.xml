@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="org.joinmastodon.android">
+	package="org.smilodon.android">
 
 	<uses-permission android:name="android.permission.INTERNET"/>
 	<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
@@ -22,7 +22,7 @@
 	</queries>
 
 	<application
-		android:name=".MastodonApp"
+		android:name="org.smilodon.android.MastodonApp"
 		android:allowBackup="true"
 		android:label="@string/app_name"
 		android:supportsRtl="true"
@@ -31,7 +31,7 @@
 		android:theme="@style/Theme.Mastodon.AutoLightDark"
 		android:largeHeap="true">
 
-		<activity android:name=".MainActivity" android:exported="true" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustResize" android:launchMode="singleTask">
+		<activity android:name="org.smilodon.android.MainActivity" android:exported="true" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustResize" android:launchMode="singleTask">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
 				<category android:name="android.intent.category.LAUNCHER"/>
@@ -49,7 +49,7 @@
 				<data android:scheme="https" android:host="mastodon.online" android:pathPrefix="/@"/>
 			</intent-filter>
 		</activity>
-		<activity android:name=".OAuthActivity" android:exported="true" android:configChanges="orientation|screenSize" android:launchMode="singleTask">
+		<activity android:name="org.smilodon.android.OAuthActivity" android:exported="true" android:configChanges="orientation|screenSize" android:launchMode="singleTask">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW"/>
 				<category android:name="android.intent.category.BROWSABLE"/>
@@ -57,7 +57,7 @@
 				<data android:scheme="mastodon-android-auth" android:host="callback"/>
 			</intent-filter>
 		</activity>
-		<activity android:name=".ExternalShareActivity" android:exported="true" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustResize">
+		<activity android:name="org.smilodon.android.ExternalShareActivity" android:exported="true" android:configChanges="orientation|screenSize" android:windowSoftInputMode="adjustResize">
 			<intent-filter>
 				<action android:name="android.intent.action.SEND"/>
 				<category android:name="android.intent.category.DEFAULT"/>
@@ -70,14 +70,14 @@
 			</intent-filter>
 		</activity>
 
-		<service android:name=".AudioPlayerService" android:foregroundServiceType="mediaPlayback"/>
+		<service android:name="org.smilodon.android.AudioPlayerService" android:foregroundServiceType="mediaPlayback"/>
 
-		<receiver android:name=".PushNotificationReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
+		<receiver android:name="org.smilodon.android.PushNotificationReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
 			<intent-filter>
 				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
 			</intent-filter>
 		</receiver>
-		<receiver android:name=".api.PushSubscriptionManager$RegistrationReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
+		<receiver android:name="org.smilodon.android.api.PushSubscriptionManager$RegistrationReceiver" android:exported="true" android:permission="com.google.android.c2dm.permission.SEND">
 			<intent-filter>
 				<action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
 				<category android:name="me.grishka.fcmtest"/>

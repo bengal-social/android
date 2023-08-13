@@ -35,7 +35,7 @@
 		android:ellipsize="end"
 		tools:text="Field title"/>
 
-	<org.joinmastodon.android.ui.views.LinkedTextView
+	<org.smilodon.android.ui.views.LinkedTextView
 		android:id="@+id/value"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"

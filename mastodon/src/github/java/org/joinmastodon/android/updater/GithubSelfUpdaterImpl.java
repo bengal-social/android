@@ -1,4 +1,4 @@
-package org.joinmastodon.android.updater;
+package org.smilodon.android.updater;
 
 import android.app.Activity;
 import android.app.DownloadManager;
@@ -18,12 +18,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-import org.joinmastodon.android.BuildConfig;
-import org.joinmastodon.android.E;
-import org.joinmastodon.android.MastodonApp;
-import org.joinmastodon.android.R;
-import org.joinmastodon.android.api.MastodonAPIController;
-import org.joinmastodon.android.events.SelfUpdateStateChangedEvent;
+import org.smilodon.android.BuildConfig;
+import org.smilodon.android.E;
+import org.smilodon.android.MastodonApp;
+import org.smilodon.android.R;
+import org.smilodon.android.api.MastodonAPIController;
+import org.smilodon.android.events.SelfUpdateStateChangedEvent;
 
 import java.io.File;
 import java.util.regex.Matcher;

@@ -1,4 +1,4 @@
-package org.joinmastodon.android.updater;
+package org.smilodon.android.updater;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;

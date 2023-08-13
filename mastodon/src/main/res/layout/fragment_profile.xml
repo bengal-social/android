@@ -10,13 +10,13 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">
 
-		<org.joinmastodon.android.ui.views.NestedRecyclerScrollView
+		<org.smilodon.android.ui.views.NestedRecyclerScrollView
 			android:id="@+id/scroller"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:nestedScrollingEnabled="true">
 
-			<org.joinmastodon.android.ui.views.CustomDrawingOrderLinearLayout
+			<org.smilodon.android.ui.views.CustomDrawingOrderLinearLayout
 				android:id="@+id/scrollable_content"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content">
 
-					<org.joinmastodon.android.ui.views.CoverImageView
+					<org.smilodon.android.ui.views.CoverImageView
 						android:id="@+id/cover"
 						android:layout_width="match_parent"
 						android:layout_height="144dp"
@@ -87,7 +87,7 @@
 						android:layout_marginHorizontal="16dp"
 						android:paddingStart="120dp">
 
-						<org.joinmastodon.android.ui.views.ProgressBarButton
+						<org.smilodon.android.ui.views.ProgressBarButton
 							android:id="@+id/profile_action_btn"
 							android:layout_width="wrap_content"
 							android:layout_height="40dp"
@@ -134,7 +134,7 @@
 					android:textColor="?colorM3OnSurfaceVariant"
 					tools:text="\@Gargron" />
 
-				<org.joinmastodon.android.ui.views.LinkedTextView
+				<org.smilodon.android.ui.views.LinkedTextView
 					android:id="@+id/bio"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
@@ -239,7 +239,7 @@
 				</LinearLayout>
 
 
-				<org.joinmastodon.android.ui.views.FloatingHintEditTextLayout
+				<org.smilodon.android.ui.views.FloatingHintEditTextLayout
 					android:id="@+id/name_edit_wrap"
 					android:layout_width="match_parent"
 					android:layout_height="80dp"
@@ -261,9 +261,9 @@
 						android:inputType="textPersonName|textCapWords"
 						android:padding="16dp"
 						tools:text="Eugen" />
-				</org.joinmastodon.android.ui.views.FloatingHintEditTextLayout>
+				</org.smilodon.android.ui.views.FloatingHintEditTextLayout>
 
-				<org.joinmastodon.android.ui.views.FloatingHintEditTextLayout
+				<org.smilodon.android.ui.views.FloatingHintEditTextLayout
 					android:id="@+id/bio_edit_wrap"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
@@ -288,9 +288,9 @@
 						android:inputType="textMultiLine|textCapSentences"
 						android:padding="16dp"
 						tools:text="Founder, CEO and lead developer @Mastodon, Germany." />
-				</org.joinmastodon.android.ui.views.FloatingHintEditTextLayout>
+				</org.smilodon.android.ui.views.FloatingHintEditTextLayout>
 
-				<org.joinmastodon.android.ui.tabs.TabLayout
+				<org.smilodon.android.ui.tabs.TabLayout
 					android:id="@+id/tabbar"
 					android:layout_width="match_parent"
 					android:layout_height="48dp"
@@ -319,8 +319,8 @@
 						android:background="?colorM3SurfaceVariant"/>
 
 				</FrameLayout>
-			</org.joinmastodon.android.ui.views.CustomDrawingOrderLinearLayout>
-		</org.joinmastodon.android.ui.views.NestedRecyclerScrollView>
+			</org.smilodon.android.ui.views.CustomDrawingOrderLinearLayout>
+		</org.smilodon.android.ui.views.NestedRecyclerScrollView>
 
 		<ImageButton
 			android:id="@+id/fab"

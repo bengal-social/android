@@ -1,0 +1,31 @@
+package org.smilodon.android.model;
+
+import org.smilodon.android.api.RequiredField;
+import org.parceler.Parcel;
+
+import java.util.List;
+
+@Parcel
+public class Hashtag extends BaseModel implements DisplayItemsParent{
+	@RequiredField
+	public String name;
+	@RequiredField
+	public String url;
+	public List<History> history;
+	public int statusesCount;
+
+	@Override
+	public String toString(){
+		return "Hashtag{"+
+				"name='"+name+'\''+
+				", url='"+url+'\''+
+				", history="+history+
+				", statusesCount="+statusesCount+
+				'}';
+	}
+
+	@Override
+	public String getID(){
+		return name;
+	}
+}

@@ -30,7 +30,7 @@
 		android:layout_marginTop="2dp"
 		android:layout_marginEnd="8dp" />
 
-	<org.joinmastodon.android.ui.views.HeaderSubtitleLinearLayout
+	<org.smilodon.android.ui.views.HeaderSubtitleLinearLayout
 		android:id="@+id/name_wrap"
 		android:layout_width="match_parent"
 		android:layout_height="24dp"
@@ -62,7 +62,7 @@
 			android:textColor="?colorM3OnSurface"
 			tools:text="boosted your cat picture" />
 
-	</org.joinmastodon.android.ui.views.HeaderSubtitleLinearLayout>
+	</org.smilodon.android.ui.views.HeaderSubtitleLinearLayout>
 
 	<TextView
 		android:id="@+id/time_and_username"
