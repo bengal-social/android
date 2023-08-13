@@ -89,7 +89,7 @@
 					android:textAppearance="@style/m3_body_large"
 					android:gravity="center_vertical"
 					android:textColor="?colorM3OnSurface"
-					tools:text="\@mastodon.social"/>
+					tools:text="\@nanobyte.cafe"/>
 
 			</org.smilodon.android.ui.views.FloatingHintEditTextLayout>
 
