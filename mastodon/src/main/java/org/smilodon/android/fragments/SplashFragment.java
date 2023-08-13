@@ -38,7 +38,7 @@ import me.grishka.appkit.views.BottomSheet;
 
 public class SplashFragment extends AppKitFragment{
 
-	private static final String DEFAULT_SERVER="mastodon.social";
+	private static final String DEFAULT_SERVER="nanobyte.cafe";
 
 	private SizeListenerFrameLayout contentView;
 	private View artContainer, blueFill, greenFill;
@@ -60,7 +60,6 @@ public class SplashFragment extends AppKitFragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
 		contentView=(SizeListenerFrameLayout) inflater.inflate(R.layout.fragment_splash, container, false);
-		contentView.findViewById(R.id.btn_get_started).setOnClickListener(this::onButtonClick);
 		contentView.findViewById(R.id.btn_log_in).setOnClickListener(this::onButtonClick);
 		defaultServerButton=contentView.findViewById(R.id.btn_join_default_server);
 		defaultServerButton.setText(getString(R.string.join_default_server, chosenDefaultServer));
@@ -107,7 +106,7 @@ public class SplashFragment extends AppKitFragment{
 
 	private void onButtonClick(View v){
 		Bundle extras=new Bundle();
-		boolean isSignup=v.getId()==R.id.btn_get_started;
+		boolean isSignup=false;
 		extras.putBoolean("signup", isSignup);
 		Nav.go(getActivity(), isSignup ? InstanceCatalogSignupFragment.class : InstanceChooserLoginFragment.class, extras);
 	}
@@ -198,42 +197,8 @@ public class SplashFragment extends AppKitFragment{
 
 	private void loadAndChooseDefaultServer(){
 		loadingDefaultServer=true;
-		new GetCatalogDefaultInstances()
-				.setCallback(new Callback<>(){
-					@Override
-					public void onSuccess(List<CatalogDefaultInstance> result){
-						if(result.isEmpty()){
-							setChosenDefaultServer(DEFAULT_SERVER);
-							return;
-						}
-						float sum=0f;
-						for(CatalogDefaultInstance inst:result){
-							sum+=inst.weight;
-						}
-						if(sum<=0)
-							sum=1f;
-						for(CatalogDefaultInstance inst:result){
-							inst.weight/=sum;
-						}
-						float rand=ThreadLocalRandom.current().nextFloat();
-						float prev=0f;
-						for(CatalogDefaultInstance inst:result){
-							if(rand>=prev && rand<prev+inst.weight){
-								setChosenDefaultServer(inst.domain);
-								return;
-							}
-							prev+=inst.weight;
-						}
-						// Just in case something didn't add up
-						setChosenDefaultServer(result.get(result.size()-1).domain);
-					}
-
-					@Override
-					public void onError(ErrorResponse error){
-						setChosenDefaultServer(DEFAULT_SERVER);
-					}
-				})
-				.execNoAuth("");
+		setChosenDefaultServer(DEFAULT_SERVER);
+		return;
 	}
 
 	private void setChosenDefaultServer(String domain){
