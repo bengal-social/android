@@ -46,7 +46,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="vertical">
-		<org.joinmastodon.android.ui.tabs.TabLayout
+		<org.smilodon.android.ui.tabs.TabLayout
 			android:id="@+id/tabbar"
 			android:layout_width="match_parent"
 			android:layout_height="48dp"

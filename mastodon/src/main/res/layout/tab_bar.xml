@@ -9,7 +9,7 @@
 	android:outlineProvider="bounds"
 	android:clipChildren="false">
 
-	<org.joinmastodon.android.ui.views.TabBar
+	<org.smilodon.android.ui.views.TabBar
 		android:id="@+id/tabbar"
 		android:layout_width="match_parent"
 		android:layout_height="56dp"
@@ -117,6 +117,6 @@
 				android:tint="?colorM3OnSurfaceVariant"
 				android:src="@drawable/ic_unfold_more_24px"/>
 		</FrameLayout>
-	</org.joinmastodon.android.ui.views.TabBar>
+	</org.smilodon.android.ui.views.TabBar>
 
 </FrameLayout>

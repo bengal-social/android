@@ -4,7 +4,7 @@
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content">
 
-	<org.joinmastodon.android.ui.views.LinkedTextView
+	<org.smilodon.android.ui.views.LinkedTextView
 		android:id="@+id/text"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"

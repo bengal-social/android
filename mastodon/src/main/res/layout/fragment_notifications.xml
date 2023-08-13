@@ -8,13 +8,13 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:background="?colorM3Surface">
 
-	<org.joinmastodon.android.ui.views.NestedRecyclerScrollView
+	<org.smilodon.android.ui.views.NestedRecyclerScrollView
 		android:id="@+id/scroller"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:fillViewport="true">
 
-		<org.joinmastodon.android.ui.views.TopBarsScrollAwayLinearLayout
+		<org.smilodon.android.ui.views.TopBarsScrollAwayLinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:orientation="vertical">
@@ -38,7 +38,7 @@
 					<FrameLayout
 						android:id="@+id/mentions_tab"
 						style="@style/Widget.Mastodon.M3.SegmentedButton">
-						<org.joinmastodon.android.ui.views.CheckIconSelectableTextView
+						<org.smilodon.android.ui.views.CheckIconSelectableTextView
 							android:id="@+id/mentions_text"
 							style="@style/Widget.Mastodon.M3.SegmentedButtonText"
 							android:text="@string/mentions"/>
@@ -47,7 +47,7 @@
 					<FrameLayout
 						android:id="@+id/all_tab"
 						style="@style/Widget.Mastodon.M3.SegmentedButton">
-						<org.joinmastodon.android.ui.views.CheckIconSelectableTextView
+						<org.smilodon.android.ui.views.CheckIconSelectableTextView
 							android:id="@+id/all_text"
 							style="@style/Widget.Mastodon.M3.SegmentedButtonText"
 							android:text="@string/all_notifications"/>
@@ -78,7 +78,7 @@
 					android:id="@+id/content_stub"/>
 
 			</FrameLayout>
-		</org.joinmastodon.android.ui.views.TopBarsScrollAwayLinearLayout>
-	</org.joinmastodon.android.ui.views.NestedRecyclerScrollView>
+		</org.smilodon.android.ui.views.TopBarsScrollAwayLinearLayout>
+	</org.smilodon.android.ui.views.NestedRecyclerScrollView>
 
 </me.grishka.appkit.views.FragmentRootLinearLayout>

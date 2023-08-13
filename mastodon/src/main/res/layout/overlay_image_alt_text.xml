@@ -34,7 +34,7 @@
 		android:tint="#FFF"
 		android:background="?android:selectableItemBackgroundBorderless"/>
 
-	<org.joinmastodon.android.ui.views.NestableScrollView
+	<org.smilodon.android.ui.views.NestableScrollView
 		android:id="@+id/alt_text_scroller"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -58,6 +58,6 @@
 
 		</LinearLayout>
 
-	</org.joinmastodon.android.ui.views.NestableScrollView>
+	</org.smilodon.android.ui.views.NestableScrollView>
 
 </FrameLayout>

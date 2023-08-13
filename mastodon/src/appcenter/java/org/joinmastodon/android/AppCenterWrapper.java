@@ -1,4 +1,4 @@
-package org.joinmastodon.android;
+package org.smilodon.android;
 
 import android.app.Application;
 import android.util.Log;
